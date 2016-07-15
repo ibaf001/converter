@@ -1,0 +1,23 @@
+<h1>Temperature</h1>
+
+<div>
+
+
+
+
+<input type="text" name="depart">&nbsp;&nbsp;<input type="text"><br>
+
+<%= select_tag(:option, options_for_select(@units, selected: :option )) %>
+<span>To</span>
+
+
+<%= select_tag(:option, options_for_select(@units, selected: :option )) %>
+<br><br>
+<button type="button" class="btn btn-primary">Reset</button>
+
+<!-- select_tag :variable, options_from_collection_for_select(:all, :id, :name), :onchange => 'convert()' -->
+
+<p id="demo"></p>
+
+</div>
+
