@@ -5,19 +5,20 @@
 
 
 
-<input type="text" name="depart">&nbsp;&nbsp;<input type="text"><br>
+<input type="text" id="r1">&nbsp;&nbsp;<input type="text" id="r2"><br>
 
-<%= select_tag(:option, options_for_select(@units, selected: :option )) %>
+<%= select_tag(:s1, options_for_select(@units, selected: :s1 ), :onchange => 'convert()') %>
 <span>To</span>
 
 
-<%= select_tag(:option, options_for_select(@units, selected: :option )) %>
+<%= select_tag(:s2, options_for_select(@units, selected: :s2 ), :onchange => 'convert()') %>
 <br><br>
 <button type="button" class="btn btn-primary">Reset</button>
 
-<!-- select_tag :variable, options_from_collection_for_select(:all, :id, :name), :onchange => 'convert()' -->
 
-<p id="demo"></p>
+
+
+<!-- select_tag :variable, options_from_collection_for_select(:all, :id, :name), :onchange => 'convert()' -->
 
 </div>
 
