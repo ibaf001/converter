@@ -1,26 +1,40 @@
-<h1><%= @text %></h1>
+<h1 class= "text-center" ><%= @text%></h1>
 
-<div>
+<div class = "container-fluid boite">
 
+  <div class = "row entree">
 
-
-
-
-<input type="text" id="r1" onkeyup = "convert_left()">&nbsp;&nbsp;<input type="text" id="r2" onkeyup = "convert_rigth()"><br>
-
-<%= select_tag(:s1, options_for_select(@units, selected: :s1 ), :onchange => 'convert()') %>
-<span>To</span>
+    
+     <!-- <input type="text" id="r1" onkeyup = "convert_left()"> -->
+     <%= text_field_tag "r1" ,0,class: "col-md-6", :onkeyup =>  "convert_left()" %>
+    
 
 
-<%= select_tag(:s2, options_for_select(@units, selected: :s2 ), :onchange => 'convert()') %>
-<br><br>
-<!-- <button type="button" class="btn btn-primary">Reset</button> -->
+     <!-- <input type="text" id="r2" onkeyup = "convert_rigth()" > -->
+     <%= text_field_tag "r2",0, class: "col-md-6 d", :onkeyup => "convert_rigth()" %>
+     
+  </div>
 
-<%= link_to "Reset", reset_path ,class: "btn btn-primary" %>
+  <div class = "row unites">
+
+    <%= select_tag(:s1, options_for_select(@units, selected: :s1 ), :onchange => 'convert()',class: "col-md-6") %>
+    <%= select_tag(:s2, options_for_select(@units, selected: :s2 ), :onchange => 'convert()',class: "col-md-6") %>
+  </div>
+
+ 
+  <div class="row">
+     <div class = "col-md-2">
+     </div>
+
+     <div class = "col-md-8 reset">
+     <%= link_to "Reset", reset_path ,class: "btn btn-primary btn-block" %>
+     </div>
+
+     <div class = "col-md-2">
+     </div>
+
+  </div>
 
 
-
-
-<!-- select_tag :variable, options_from_collection_for_select(:all, :id, :name), :onchange => 'convert()' -->
 
 </div>

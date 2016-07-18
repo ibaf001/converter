@@ -1,0 +1,18 @@
+.boite{
+    border-style: solid;
+    border-width: 5px;
+    border-color: #b3d1ff;
+}
+
+.entree{
+  padding-top: 50px;
+}
+
+.unites{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.reset{
+  padding-bottom: 100px;
+}
