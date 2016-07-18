@@ -5,7 +5,7 @@
 
 
 
-<input type="text" id="r1">&nbsp;&nbsp;<input type="text" id="r2"><br>
+<input type="text" id="r1" onKeyUp = "convert_rigth()">&nbsp;&nbsp;<input type="text" id="r2" 1``onKeyUp = "convert_left()"><br>
 
 <%= select_tag(:s1, options_for_select(@units, selected: :s1 ), :onchange => 'convert()') %>
 <span>To</span>
