@@ -5,13 +5,14 @@
 
 
 
-<input type="text" id="r1" onKeyUp = "convert_rigth()">&nbsp;&nbsp;<input type="text" id="r2" 1``onKeyUp = "convert_left()"><br>
 
-<%= select_tag(:s1, options_for_select(@units, selected: :s1 ), :onchange => 'convert()') %>
+<input type="text" id="r1" onkeyup = "convert_left()">&nbsp;&nbsp;<input type="text" id="r2" 1``onKeyUp = "convert_rigth()"><br>
+
+<%= select_tag(:s1, options_for_select(@units, selected: :s1 )) %>
 <span>To</span>
 
 
-<%= select_tag(:s2, options_for_select(@units, selected: :s2 ), :onchange => 'convert()') %>
+<%= select_tag(:s2, options_for_select(@units, selected: :s2 )) %>
 <br><br>
 <button type="button" class="btn btn-primary">Reset</button>
 
