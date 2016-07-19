@@ -1,6 +1,7 @@
 
 function convert_left(){
     var res = 0;
+    var precision =parseInt(document.getElementById("precis").value);
     var v1 = document.getElementById("r1").value;
     if(v1 == ""){
       res = "";
@@ -36,12 +37,13 @@ function convert_left(){
         res = v1;
       }
    }
-
+    if(!isNaN(res) && res % 1 != 0) res = res.toFixed(precision);
     document.getElementById("r2").value = res;
 }
 
 function convert_rigth(){
     var res = 0;
+    var precision =parseInt(document.getElementById("precis").value);
     var v1 = document.getElementById("r2").value;
     if(v1 == ""){
       res = "";
@@ -74,7 +76,7 @@ function convert_rigth(){
         res = v1;
       }
    }
-
+    if(!isNaN(res) && res % 1 != 0) res = res.toFixed(precision);
     document.getElementById("r1").value = res;
 }
 
