@@ -11,19 +11,25 @@ function convert_left(){
       var a = document.getElementById("s1").value;
       var b = document.getElementById("s2").value;
       
-      if(a =='celsius' && b == 'fahrenheit'){
+      if(a =='Celsius' && b == 'Fahrenheit'){
         res = celsius_to_fahrenheit(v1);
       }
-      else if (a =='fahrenheit' && b == 'celsius'){
+      else if (a =='Fahrenheit' && b == 'Celsius'){
         res = fahrenheit_to_celsius(v1);
       }
-      else if (a =='celsius' && b == 'kelvin'){
+      else if (a =='Celsius' && b == 'Kelvin'){
         res = celsius_to_kelvin(v1);
       }
-      else if (a =='kelvin' && b == 'celsius'){
+      else if (a =='Kelvin' && b == 'Celsius'){
         res = kelvin_to_celsius(v1);
       }
-      else if(a =='meters' && b == 'decimeters'){
+      else if (a == 'Kelvin' && b == 'Fahrenheit'){
+        res = kelvin_to_fahrenheit(v1);
+      }
+      else if (a == 'Fahrenheit' && b == 'Kelvin'){
+        res = fahrenheit_to_kelvin(v1);
+      }
+      else if(a =='Meters' && b == 'Decimeters'){
         res =meter_to_decimeter(v1);
       }
       else{
@@ -46,19 +52,25 @@ function convert_rigth(){
       var a = document.getElementById("s1").value;
       var b = document.getElementById("s2").value;
       
-      if(b =='celsius' && a == 'fahrenheit'){
+      if(b =='Celsius' && a == 'Fahrenheit'){
         res = celsius_to_fahrenheit(v1);
       }
-      else if (b =='fahrenheit' && a == 'celsius'){
+      else if (b =='Fahrenheit' && a == 'Celsius'){
         res = fahrenheit_to_celsius(v1);
       }
-      else if (b =='celsius' && a == 'kelvin'){
+      else if (b =='Celsius' && a == 'Kelvin'){
         res = celsius_to_kelvin(v1);
       }
-      else if (b =='kelvin' && a == 'celsius'){
+      else if (b =='Kelvin' && a == 'Celsius'){
         res = kelvin_to_celsius(v1);
       }
-      else if(b =='meters' && a == 'decimeters'){
+      else if (b == 'Kelvin' && a == 'Fahrenheit'){
+        res = kelvin_to_fahrenheit(v1);
+      }
+      else if (b == 'Fahrenheit' && a == 'Kelvin'){
+        res = fahrenheit_to_kelvin(v1);
+      }
+      else if(b =='Meters' && a == 'Decimeters'){
         res =meter_to_decimeter(v1);
       }
       else{
@@ -74,6 +86,7 @@ function convert_rigth(){
 function convert(){
   convert_left();
 }
+
 
 
 /*

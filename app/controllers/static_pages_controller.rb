@@ -4,22 +4,22 @@ class StaticPagesController < ApplicationController
   
   def temp
     @text = 'Temperature'
-    @units = ['celsius','fahrenheit','kelvin']
+    @units = ['Celsius','Fahrenheit','Kelvin','Rankine','Reamure']
   end
 
   def lengths
     @text = 'Length'
-    @units = ['meters','decimeters','centimeters','inches']
+    @units = ['Meters','Decimeters','Centimeters','Inches']
   end
   
   def time
     @text = 'Time'
-    @units = ['secondes','minutes','hours','days']
+    @units = ['Secondes','Minutes','Hours','Days']
   end
 
   def volume
     @text = 'Volume'
-    @units = ['liters','gallons','cubic feet','microliters']
+    @units = ['Liters','Gallons','Cubic feet','Microliters']
   end
 
   def reset
