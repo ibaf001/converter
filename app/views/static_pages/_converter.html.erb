@@ -1,4 +1,6 @@
-<h1 class= "text-center" ><%= @text%></h1>
+<% provide(:title, @text) %>
+
+<h1 class= "text-center" ><%= @text %></h1>
 
 <div class = "container-fluid boite">
 
@@ -49,7 +51,7 @@
      </div>
 
      <div class = "col-md-8 reset">
-     <%= link_to "Reset", reset_path ,class: "btn btn-primary btn-block" %>
+     <%= link_to "Reset", reset_path ,class: "btn btn-danger btn-block" %>
      </div>
 
      <div class = "col-md-2">
