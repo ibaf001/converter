@@ -29,6 +29,9 @@ function convert_left(){
       else if (a == 'Fahrenheit' && b == 'Kelvin'){
         res = fahrenheit_to_kelvin(v1);
       }
+      else if (a == 'Celsius' && b == 'Rankine'){
+        res = celsius_to_rankine(v1);
+      }
       else if(a =='Meters' && b == 'Decimeters'){
         res =meter_to_decimeter(v1);
       }
