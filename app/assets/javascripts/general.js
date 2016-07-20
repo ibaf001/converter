@@ -1,4 +1,56 @@
+function convert_left(){
+    var res = 0;
+    var precision =parseInt(document.getElementById("precis").value);
+    var v1 = document.getElementById("r1").value;
+    if(v1 == ""){
+      res = "";
+    }
+    else{
+      v1 = parseInt(v1);
+      var unit1 = document.getElementById("s1").value;
+      var unit2 = document.getElementById("s2").value;
+      res = convert_len(v1,unit1,unit2);
+      
 
+   }
+    if(!isNaN(res) && res % 1 != 0) res = res.toFixed(precision);
+    document.getElementById("r2").value = res;
+}
+
+
+
+function convert_rigth(){
+    var res = 0;
+    var precision =parseInt(document.getElementById("precis").value);
+    var v1 = document.getElementById("r2").value;
+    if(v1 == ""){
+      res = "";
+    }
+    else{
+
+      v1 = parseInt(v1);
+      var unit1 = document.getElementById("s1").value;
+      var unit2 = document.getElementById("s2").value;
+      res = convert_len(v1,unit1,unit2);
+      
+      
+   }
+    if(!isNaN(res) && res % 1 != 0) res = res.toFixed(precision);
+    document.getElementById("r1").value = res;
+}
+
+
+
+function convert(){
+  convert_left();
+}
+
+
+
+
+
+
+/*
 function convert_left(){
     var res = 0;
     var precision =parseInt(document.getElementById("precis").value);
@@ -88,30 +140,7 @@ function convert(){
 
 
 
-/*
-function convert_rigth(){
-    var v1 = document.getElementById("r2").value == ""? 0 : document.getElementById("r2").value;
-    v1 = parseInt(v1);
-    var a = document.getElementById("s1").value;
-    var b = document.getElementById("s2").value;
-    var res = 0;
-    if(b =='celsius' && a == 'fahrenheit'){
-       res = celsius_to_fahrenheit(v1);
-    }else if (b =='fahrenheit' && a == 'celsius'){
-      res = fahrenheit_to_celsius(v1);
-    }
-    else if (b =='celsius' && a == 'kelvin'){
-      res = celsius_to_kelvin(v1);
-    }
-    else if (b =='kelvin' && a == 'celsius'){
-      res = kelvin_to_celsius(v1);
-    }
-    else{
-      res = v1;
-    }
-
-    document.getElementById("r1").value = res;
-}
-
 */
+
+
 
