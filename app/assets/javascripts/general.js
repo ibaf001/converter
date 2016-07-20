@@ -9,9 +9,13 @@ function convert_left(){
       v1 = parseInt(v1);
       var unit1 = document.getElementById("s1").value;
       var unit2 = document.getElementById("s2").value;
-      res = convert_len(v1,unit1,unit2);
-      
-
+      var unit = document.getElementById("unit").innerHTML;
+      if (unit == "Length"){
+        res = convert_len(v1,unit1,unit2);
+      }
+      else{
+        res = 0;
+      }
    }
     if(!isNaN(res) && res % 1 != 0) res = res.toFixed(precision);
     document.getElementById("r2").value = res;
@@ -29,9 +33,15 @@ function convert_rigth(){
     else{
 
       v1 = parseInt(v1);
-      var unit1 = document.getElementById("s1").value;
-      var unit2 = document.getElementById("s2").value;
-      res = convert_len(v1,unit1,unit2);
+      var unit1 = document.getElementById("s2").value;
+      var unit2 = document.getElementById("s1").value;
+      var unit = document.getElementById("unit").innerHTML;
+      if (unit == "Length"){
+        res = convert_len(v1,unit1,unit2);
+      }
+      else{
+        res = 0;
+      }
       
       
    }
