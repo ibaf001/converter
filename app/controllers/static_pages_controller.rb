@@ -4,7 +4,7 @@ class StaticPagesController < ApplicationController
   
   def temp
     @text = 'Temperature'
-    @units = ['Celsius','Fahrenheit','Kelvin','Rankine','Reamure']
+    @units = ['Celsius','Fahrenheit','Kelvin','Rankine','Reaumure']
   end
 
   def lengths

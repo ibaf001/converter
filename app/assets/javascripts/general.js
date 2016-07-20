@@ -13,6 +13,9 @@ function convert_left(){
       if (unit == "Length"){
         res = convert_len(v1,unit1,unit2);
       }
+      else if(unit == "Temperature"){
+        res = convert_temp(v1,unit1,unit2);
+      }
       else{
         res = 0;
       }
@@ -38,6 +41,9 @@ function convert_rigth(){
       var unit = document.getElementById("unit").innerHTML;
       if (unit == "Length"){
         res = convert_len(v1,unit1,unit2);
+      }
+      else if(unit == "Temperature"){
+        res = convert_temp(v1,unit1,unit2);
       }
       else{
         res = 0;
