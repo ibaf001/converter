@@ -14,9 +14,11 @@ var len = {
 
 function convert_len(n,unit1,unit2){
   if(unit1 != "Meter" && unit2 == "Meter"){
+
     return len[unit1] * n;
   }
   else if(unit1 == "Meter" && unit2 != "Meter"){
+
      return (1/len[unit2]) * n;
   }
   else if(unit1 != "Meter" && unit2 != "Meter" && unit1 != unit2){
