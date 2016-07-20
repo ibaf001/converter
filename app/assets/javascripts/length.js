@@ -5,7 +5,11 @@ var len = {
   Mile: 1609.34,
   Yard: 0.9144,
   Centimeter: 0.01,
-  Inch: 0.0254
+  Inch: 0.0254,
+  Kilometer: 1000,
+  Decimeter: 0.1,
+  Centimer: 0.01,
+  Micrometer: 0.000001
 }
 
 function convert_len(n,unit1,unit2){
