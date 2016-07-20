@@ -19,6 +19,9 @@ function convert_left(){
       else if(unit == "Time"){
         res = convert_time(v1,unit1,unit2);
       }
+      else if(unit == "Volume"){
+        res = convert_volume(v1,unit1,unit2);
+      }
       else{
         res = 0;
       }
@@ -50,6 +53,9 @@ function convert_rigth(){
       }
       else if(unit == "Time"){
         res = convert_time(v1,unit1,unit2);
+      }
+      else if(unit == "Volume"){
+        res = convert_volume(v1,unit1,unit2);
       }
       else{
         res = 0;

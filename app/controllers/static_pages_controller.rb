@@ -19,7 +19,7 @@ class StaticPagesController < ApplicationController
 
   def volume
     @text = 'Volume'
-    @units = ['Liters','Gallons','Cubic feet','Microliters']
+    @units = ['Liters','Barrels','Gallons','Cups','Ounces']
   end
 
   def reset
