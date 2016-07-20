@@ -9,12 +9,12 @@ class StaticPagesController < ApplicationController
 
   def lengths
     @text = 'Length'
-    @units = ['Kilometer','Meter','Decimeter','Centimeter','Micrometer','Inch','Foot','Yard','Mile']
+    @units = ['Meter','Kilometer','Decimeter','Centimeter','Micrometer','Inch','Foot','Yard','Mile']
   end
   
   def time
     @text = 'Time'
-    @units = ['Secondes','Minutes','Hours','Days']
+    @units = ['Seconds','Minutes','Hours','Days','Weeks','Years']
   end
 
   def volume

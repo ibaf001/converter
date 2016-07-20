@@ -16,6 +16,9 @@ function convert_left(){
       else if(unit == "Temperature"){
         res = convert_temp(v1,unit1,unit2);
       }
+      else if(unit == "Time"){
+        res = convert_time(v1,unit1,unit2);
+      }
       else{
         res = 0;
       }
@@ -44,6 +47,9 @@ function convert_rigth(){
       }
       else if(unit == "Temperature"){
         res = convert_temp(v1,unit1,unit2);
+      }
+      else if(unit == "Time"){
+        res = convert_time(v1,unit1,unit2);
       }
       else{
         res = 0;
