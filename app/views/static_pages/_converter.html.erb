@@ -5,8 +5,7 @@
 <div class = "container-fluid boite ">
   <div class = "jumbotron">
 
-
-   <div class ="row">
+  <div class ="row">
        <div class ="col-md-5 block-gauche">
            <%= text_field_tag "r1" ,0,class: "btn-block", :onkeyup =>  "convert_left()" %>
            <%= select_tag(:s1, options_for_select(@units, selected: :s1 ), :onchange => 'convert()',class: "btn-block") %>
@@ -22,33 +21,7 @@
            <%= select_tag(:s2, options_for_select(@units, selected: :s2 ), :onchange => 'convert()',class: "btn-block") %>
        </div>
    </div>
-<!--  ancien 
-  <div class = "row entree">
 
-    
- 
-     <%= text_field_tag "r1" ,0,class: "col-md-5", :onkeyup =>  "convert_left()" %>
-    
-     <div class = "col-md-2 text-center ta">
-        <span class="glyphicon glyphicon-arrow-right "></span><br>
-        <span class="glyphicon glyphicon-arrow-left "></span>
-     </div>
-
-   
-     <%= text_field_tag "r2",0, class: "col-md-5", :onkeyup => "convert_rigth()" %>
-     
-  </div>
-
-  <div class = "row unites">
-
-    <%= select_tag(:s1, options_for_select(@units, selected: :s1 ), :onchange => 'convert()',class: "col-md-5") %>
-     <div class = "col-md-2 text-center bottom_arrow">
-       
-     </div>
-    <%= select_tag(:s2, options_for_select(@units, selected: :s2 ), :onchange => 'convert()',class: "col-md-5") %>
-  </div>
-
-  -->
   <div class="row">
      <div class = "col-md-2">
      </div>
@@ -66,6 +39,7 @@
    <span>Decimals </span>
    <%= number_field_tag :precis, 2, min: 0, max: 5,:onchange => 'convert()',class: "precision" %>
 </div>
+   
  </div>
 
 </div>

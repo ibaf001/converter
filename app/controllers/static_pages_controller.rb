@@ -31,6 +31,13 @@ class StaticPagesController < ApplicationController
     @text = 'Pressure'
     @units = ['Atmospheres','Bars','Pascals','Torr']
   end
+  
+  def contact_us
+    @text ="Contact us"
+    if request.post?
+      redirect_to root_path
+    end
+  end
 
   def reset
     redirect_to request.referrer 

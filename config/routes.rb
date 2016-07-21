@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get 'reset' =>'static_pages#reset'
   get 'mass' =>'static_pages#mass'
   get 'pressure' =>'static_pages#pressure'
+  get 'contact_us' =>'static_pages#contact_us'
+  post 'contact_us' =>'static_pages#contact_us'
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
