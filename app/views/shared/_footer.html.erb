@@ -1,7 +1,7 @@
 <div class="container footer" >
   <div class="row">
     <div class="col-md-6">&copy; <%= Time.now.year %> Ibo Bafumba</div>
-    <div class="col-md-6"><%= link_to "Contact us", contact_us_path %></div>
+    <div class="col-md-6"><%= link_to "Contact us", contact_us_path unless @hide_contact_link %></div>
   </div>
 
 </div>

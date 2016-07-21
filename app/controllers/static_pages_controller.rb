@@ -34,6 +34,7 @@ class StaticPagesController < ApplicationController
   
   def contact_us
     @text ="Contact us"
+    @hide_contact_link = true
     if request.post?
       redirect_to root_path
     end
