@@ -35,15 +35,33 @@ class StaticPagesController < ApplicationController
   def contact_us
     @text ="Contact us"
     @hide_contact_link = true
+    @visite = 1
+    #@contact = Contact.new
+
     if request.post?
-      ContactMailer.contact(params[:name],params[:email],params[:message]).deliver_now
-      flash[:success] = "Message sent successfully"
-      redirect_to root_path
+      #debugger
+      @visite = @visite + 1
+      @contact = Contact_us.new(params["/contact_us"]["name"],params["/contact_us"]["email"],params["/contact_us"]["message"])
+      
+      if @contact.valid?
+        ContactMailer.contact(@contact.name,@contact.email,@contact.message).deliver_now
+        flash[:success] = "Message sent successfully"
+        redirect_to root_path
+      else
+        #debugger
+        render 'contact_us'
+      end
     end
   end
 
   def reset
     redirect_to request.referrer 
   end
+
+  private
+  
+    def contact_param
+      params.require(:contact_us).permit(:name, :email, :message)
+    end
 
 end
