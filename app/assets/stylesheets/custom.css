@@ -1,39 +1,3 @@
-/*
-.boite{
-    border-style: solid;
-    border-width: 3px;
-    border-color: #b3d1ff;
-}
-
-.entree{
-  padding-top: 50px;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.unites{
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.reset{
-  padding-bottom: 100px;
-}
-
-.ta{
-  padding-top: 20px;
-}
-
-
-
-.boite{
-    border-style: solid;
-    border-width: 3px;
-    border-color: #b3d1ff;
-}
-*/
 
 .block-gauche{
   padding-top: 50px;
@@ -54,6 +18,8 @@
 .fleches{
   padding-top: 70px;
 }
+
+
 
 
 

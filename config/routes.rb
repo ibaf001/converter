@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'static_pages#temp'
+  root 'static_pages#lengths'
 
   get 'temp' =>'static_pages#temp'
   get 'length' =>'static_pages#lengths'
