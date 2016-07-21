@@ -1,17 +1,6 @@
 <% provide(:title, @text) %>
 
-<% if @visite > 1 %>
-  <% if @contact.errors.any? %>
-  <div class="alert alert-danger">
-     The form contains <%= pluralize( @contact.errors.count,"error") %> .
-  </div>
-  <ul>
-  <%  @contact.errors.full_messages.each do |msg| %>
-    <li class="text-danger"><%= msg %></li>
-  <% end %>
-  </ul>
-  <% end %>
-<% end %>
+<%= render 'errors_messages' %>
 
 
 
@@ -26,6 +15,7 @@
 
 
     <div class="col-md-8">
+
 <!--
     <%= form_tag("/contact_us", method: "post") do %>
 
