@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'time' =>'static_pages#time'
   get 'volume' =>'static_pages#volume'
   get 'reset' =>'static_pages#reset'
+  get 'mass' =>'static_pages#mass'
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

@@ -22,6 +22,11 @@ class StaticPagesController < ApplicationController
     @units = ['Liters','Barrels','Gallons','Cups','Ounces']
   end
 
+  def mass
+    @text = 'Mass'
+    @units = ['Grams','Kilograms','Tonnes','Pounds','Milligrams','Ounces']
+  end
+
   def reset
     redirect_to request.referrer 
   end

@@ -51,6 +51,9 @@ function convert_units(v1,unit1,unit2){
   else if(unit == "Volume"){
     res = convert_volume(v1,unit1,unit2);
   }
+  else if(unit == "Mass"){
+    res = convert_mass(v1,unit1,unit2);
+  }
   else{
    res = 0;
   }
