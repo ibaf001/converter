@@ -5,6 +5,6 @@ class ContactMailer < ApplicationMailer
     @name = name
     #from: "olala@gmail.com"
     @message = message
-    mail to: "ibobafumba@gmail.com", subject: "units conversion not working"
+    mail to: "ibobafumba@gmail.com", subject: "units conversion not working", from: email
   end
 end
