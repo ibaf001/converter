@@ -9,7 +9,6 @@ function convert_left(){
       v1 = Number(v1);
       var unit1 = document.getElementById("s1").value;
       var unit2 = document.getElementById("s2").value;
-      //var unit = document.getElementById("unit").innerHTML;
       res = convert_units(v1,unit1,unit2);
    }
     if(!isNaN(res) && res % 1 != 0) res = res.toFixed(precision);
@@ -30,7 +29,6 @@ function convert_rigth(){
       v1 = Number(v1);
       var unit1 = document.getElementById("s2").value;
       var unit2 = document.getElementById("s1").value;
-      //var unit = document.getElementById("unit").innerHTML;
       res = convert_units(v1,unit1,unit2);
    }
     if(!isNaN(res) && res % 1 != 0) res = res.toFixed(precision);
