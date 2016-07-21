@@ -36,6 +36,8 @@ class StaticPagesController < ApplicationController
     @text ="Contact us"
     @hide_contact_link = true
     if request.post?
+      ContactMailer.contact(params[:name],params[:email],params[:message]).deliver_now
+      flash[:success] = "Message sent successfully"
       redirect_to root_path
     end
   end

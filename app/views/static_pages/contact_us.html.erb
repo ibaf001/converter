@@ -20,7 +20,7 @@
          <%= text_field_tag :email ,"", class: "form-control",placeholder: "Enter your email" %>
       </div>
       <div class="form-group">
-         <%= text_area_tag :message ,"", class: "form-control", placeholder: "Enter your message..." %>
+         <%= text_area_tag :message ,"", class: "form-control", placeholder: "Enter your message...", :rows => 6 %>
       </div>
       <%= submit_tag "Submit" , class: "btn btn-primary btn-block" %>
      <% end %>
