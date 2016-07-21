@@ -27,6 +27,11 @@ class StaticPagesController < ApplicationController
     @units = ['Grams','Kilograms','Tonnes','Pounds','Milligrams','Ounces']
   end
 
+  def pressure
+    @text = 'Pressure'
+    @units = ['Atmospheres','Bars','Pascals','Torr']
+  end
+
   def reset
     redirect_to request.referrer 
   end
