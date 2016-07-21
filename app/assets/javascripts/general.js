@@ -6,7 +6,7 @@ function convert_left(){
       res = "";
     }
     else{
-      v1 = parseInt(v1);
+      v1 = Number(v1);
       var unit1 = document.getElementById("s1").value;
       var unit2 = document.getElementById("s2").value;
       //var unit = document.getElementById("unit").innerHTML;
@@ -27,7 +27,7 @@ function convert_rigth(){
     }
     else{
 
-      v1 = parseInt(v1);
+      v1 = Number(v1);
       var unit1 = document.getElementById("s2").value;
       var unit2 = document.getElementById("s1").value;
       //var unit = document.getElementById("unit").innerHTML;
