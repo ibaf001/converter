@@ -31,6 +31,11 @@ class StaticPagesController < ApplicationController
     @text = 'Pressure'
     @units = ['Atmospheres','Bars','Pascals','Torr']
   end
+
+  def energy
+    @text = 'Energy'
+    @units = ['Joule','Kilocalories','Kilojoules','Horsepower','Btu','Ergs']
+  end
   
   def contact_us
     @text ="Contact us"
