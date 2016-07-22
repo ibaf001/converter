@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'volume' =>'static_pages#volume'
   get 'reset' =>'static_pages#reset'
   get 'mass' =>'static_pages#mass'
+  get 'energy' =>'static_pages#energy'
   get 'pressure' =>'static_pages#pressure'
   get 'contact_us' =>'static_pages#contact_us'
   post 'contact_us' =>'static_pages#contact_us'
