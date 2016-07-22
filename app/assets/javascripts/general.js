@@ -60,6 +60,9 @@ function convert_units(v1,unit1,unit2){
   else if(unit == "Energy"){
     res = convert_energy(v1,unit1,unit2);
   }
+  else if(unit == "Force"){
+    res = convert_force(v1,unit1,unit2);
+  }
   else{
    res = 0;
   }

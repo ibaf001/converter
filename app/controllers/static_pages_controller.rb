@@ -37,6 +37,11 @@ class StaticPagesController < ApplicationController
     @units = ['Joule','Kilocalories','Kilojoules','Horsepower','Btu','Ergs']
   end
   
+  def force
+    @text = 'Force'
+    @units = ['Dynes','Newtons','Meganewtons','Kilonewtons','Kips','Poundals','Sthène']
+  end
+  
   def contact_us
     @text ="Contact us"
     @hide_contact_link = true
