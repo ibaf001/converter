@@ -6,7 +6,8 @@ var time = {
   Hours: 3600,
   Days: 86400,
   Weeks: 604800,
-  Years: 31536000
+  Years: 31536000,
+  Decades: 315360000
 }
 
 function convert_time(n,unit1,unit2){

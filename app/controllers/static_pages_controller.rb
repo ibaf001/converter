@@ -14,7 +14,7 @@ class StaticPagesController < ApplicationController
   
   def time
     @text = 'Time'
-    @units = ['Seconds','Minutes','Hours','Days','Weeks','Years']
+    @units = ['Seconds','Minutes','Hours','Days','Weeks','Years','Decades']
   end
 
   def volume
