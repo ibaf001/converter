@@ -7,8 +7,8 @@ function convert_left(){
     }
     else{
       v1 = Number(v1);
-      var unit1 = document.getElementById("s1").value;
-      var unit2 = document.getElementById("s2").value;
+      var unit1 = transform_unit(document.getElementById("s1").value);
+      var unit2 = transform_unit(document.getElementById("s2").value);
       res = convert_units(v1,unit1,unit2);
    }
     if(!isNaN(res) && res % 1 != 0) res = res.toFixed(precision);
@@ -27,8 +27,8 @@ function convert_rigth(){
     else{
 
       v1 = Number(v1);
-      var unit1 = document.getElementById("s2").value;
-      var unit2 = document.getElementById("s1").value;
+      var unit1 = transform_unit(document.getElementById("s2").value);
+      var unit2 = transform_unit(document.getElementById("s1").value);
       res = convert_units(v1,unit1,unit2);
    }
     if(!isNaN(res) && res % 1 != 0) res = res.toFixed(precision);
@@ -72,6 +72,11 @@ function convert_units(v1,unit1,unit2){
 
 function convert(){
   convert_left();
+}
+
+function transform_unit(unite){
+  var a = unite.split(" ");
+  return a.join("_");
 }
 
 

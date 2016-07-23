@@ -5,7 +5,9 @@ var pressure = {
   Atmospheres: 101325,
   Bars: 100000,
   Pascals: 1,
-  Torr: 133.322
+  Torr: 133.322,
+  Inches_of_mercury: 3386.388,
+  Millimeters_of_mercury: 133.322
   //Newtons/sq.meter: 1
 
 }

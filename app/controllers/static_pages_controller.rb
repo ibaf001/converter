@@ -29,7 +29,7 @@ class StaticPagesController < ApplicationController
 
   def pressure
     @text = 'Pressure'
-    @units = ['Atmospheres','Bars','Pascals','Torr']
+    @units = ['Atmospheres','Bars','Pascals','Torr','Inches of mercury','Millimeters of mercury']
   end
 
   def energy
