@@ -1,23 +1,23 @@
 
 
 var time = { 
-  Seconds: 1,
-  Minutes: 60,
-  Hours: 3600,
-  Days: 86400,
-  Weeks: 604800,
-  Years: 31536000,
-  Decades: 315360000
+  seconds: 1,
+  minutes: 60,
+  hours: 3600,
+  days: 86400,
+  weeks: 604800,
+  years: 31536000,
+  decades: 315360000
 }
 
 function convert_time(n,unit1,unit2){
-  if(unit1 != "Seconds" && unit2 == "Seconds"){
+  if(unit1 != "seconds" && unit2 == "seconds"){
     return time[unit1] * n;
   }
-  else if(unit1 == "Seconds" && unit2 != "Seconds"){
+  else if(unit1 == "seconds" && unit2 != "seconds"){
      return (1 /time[unit2]) * n;
   }
-  else if(unit1 != "Seconds" && unit2 != "Seconds" && unit1 != unit2){
+  else if(unit1 != "seconds" && unit2 != "seconds" && unit1 != unit2){
      var m = time[unit1] * n;
      return (1 /time[unit2]) * m;
   }

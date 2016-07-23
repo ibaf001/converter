@@ -4,42 +4,42 @@ class StaticPagesController < ApplicationController
   
   def temp
     @text = 'Temperature'
-    @units = ['Celsius','Fahrenheit','Kelvin','Rankine','Reaumure']
+    @units = ['celsius','fahrenheit','kelvin','rankine','reaumure']
   end
 
   def lengths
     @text = 'Length'
-    @units = ['Meter','Kilometer','Decimeter','Centimeter','Micrometer','Inch','Foot','Yard','Mile']
+    @units = ['meter','kilometer','decimeter','centimeter','micrometer','inch','foot','yard','mile']
   end
   
   def time
     @text = 'Time'
-    @units = ['Seconds','Minutes','Hours','Days','Weeks','Years','Decades']
+    @units = ['seconds','minutes','hours','days','weeks','years','decades']
   end
 
   def volume
     @text = 'Volume'
-    @units = ['Liters','Barrels','Gallons','Cups','Ounces']
+    @units = ['liters','barrels','gallons','cups','ounces']
   end
 
   def mass
     @text = 'Mass'
-    @units = ['Grams','Kilograms','Tonnes','Pounds','Milligrams','Ounces']
+    @units = ['grams','kilograms','tonnes','pounds','milligrams','ounces']
   end
 
   def pressure
     @text = 'Pressure'
-    @units = ['Atmospheres','Bars','Pascals','Torr','Inches of mercury','Millimeters of mercury']
+    @units = ['atmospheres','bars','pascals','torr','inches of mercury','millimeters of mercury']
   end
 
   def energy
     @text = 'Energy'
-    @units = ['Joule','Kilocalories','Kilojoules','Horsepower','Btu','Ergs']
+    @units = ['joule','kilocalories','kilojoules','horsepower','btu','ergs']
   end
   
   def force
     @text = 'Force'
-    @units = ['Dynes','Newtons','Meganewtons','Kilonewtons','Kips','Poundals','Sthène']
+    @units = ['dynes','newtons','meganewtons','kilonewtons','kips','poundals','sthène']
   end
   
   def contact_us
