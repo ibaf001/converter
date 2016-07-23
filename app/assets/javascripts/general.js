@@ -74,12 +74,14 @@ function convert(){
   convert_left();
 }
 
+/*
 function transform_unit(unite){
   var a = unite.split(" ");
   return a.join("_");
 }
 
-/*
+*/
+
 
 function transform(unite){
   var a = unite.split("/");
@@ -95,7 +97,6 @@ function transform_unit(unite){
   return result.join("_");
 }
   
-*/
 
 
 
