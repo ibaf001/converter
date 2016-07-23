@@ -63,6 +63,9 @@ function convert_units(v1,unit1,unit2){
   else if(unit == "force"){
     res = convert_force(v1,unit1,unit2);
   }
+  else if(unit == "area"){
+    res = convert_area(v1,unit1,unit2);
+  }
   else{
    res = 0;
   }

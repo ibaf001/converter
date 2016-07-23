@@ -41,6 +41,11 @@ class StaticPagesController < ApplicationController
     @text = 'Force'
     @units = ['dynes','newtons','meganewtons','kilonewtons','kips','poundals','sthène']
   end
+
+  def area
+    @text = 'Area'
+    @units = ['square meters','acres','ares','hectares','square yards','square feet']
+  end
   
   def contact_us
     @text ="Contact us"

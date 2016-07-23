@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'static_pages#lengths'
 
+  get 'area' =>'static_pages#area'
   get 'temp' =>'static_pages#temp'
   get 'length' =>'static_pages#lengths'
   get 'force' =>'static_pages#force'
