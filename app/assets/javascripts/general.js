@@ -38,21 +38,44 @@ function convert_rigth(){
 
 function convert_all(n,unit1,unit2,ref,s){
   if(unit1 != ref && unit2 == ref){
-
+    if (s == "Temperature")return (q[s][unit1])[0](n);
     return (q[s][unit1]) * n;
   }
   else if(unit1 == ref && unit2 != ref){
-
+     if (s == "Temperature")return (q[s][unit2])[1](n);
      return (1/(q[s][unit2])) * n;
   }
   else if(unit1 != ref && unit2 != ref && unit1 != unit2){
-     var m = (q[s][unit1]) * n;
+     var m = 0;
+     if (s == "Temperature"){
+       m = (q[s][unit1])[0](n);
+       return (q[s][unit2])[1](m)
+     }
+     m = (q[s][unit1]) * n;
      return (1/(q[s][unit2])) * m;
   }
   else{
     return n;
   }
 }
+
+/*
+function convert_temp(n,unit1,unit2){
+  if(unit1 != "kelvin" && unit2 == "kelvin"){
+    return temp[unit1][0](n);
+  }
+  else if(unit1 == "kelvin" && unit2 != "kelvin"){
+     return temp[unit2][1](n);
+  }
+  else if(unit1 != "kelvin" && unit2 != "kelvin" && unit1 != unit2){
+     var m = temp[unit1][0](n);
+     return temp[unit2][1](m);
+  }
+  else{
+    return n;
+  }
+}
+*/
 function convert_units(v1,unit1,unit2){
   var res = 0;
   var dimension = (document.getElementById("unit").innerHTML);
@@ -60,44 +83,7 @@ function convert_units(v1,unit1,unit2){
   return convert_all(v1,unit1,unit2,ref,dimension);
 }
 
-/*
-function convert_units(v1,unit1,unit2){
-  var res = 0;
-  var unit = (document.getElementById("unit").innerHTML).toLowerCase();
-  if (unit == "length"){
-    res = convert_len(v1,unit1,unit2);
-  }
-  else if(unit == "temperature"){
-    res = convert_temp(v1,unit1,unit2);
-  }
-  else if(unit == "time"){
-    res = convert_time(v1,unit1,unit2);
-  }
-  else if(unit == "volume"){
-    res = convert_volume(v1,unit1,unit2);
-  }
-  else if(unit == "mass"){
-    res = convert_mass(v1,unit1,unit2);
-  }
-  else if(unit == "pressure"){
-    res = convert_pressure(v1,unit1,unit2);
-  }
-  else if(unit == "energy"){
-    res = convert_energy(v1,unit1,unit2);
-  }
-  else if(unit == "force"){
-    res = convert_force(v1,unit1,unit2);
-  }
-  else if(unit == "area"){
-    res = convert_area(v1,unit1,unit2);
-  }
-  else{
-   res = 0;
-  }
-  return res;
-}
 
-*/
 
 function convert(){
   convert_left();

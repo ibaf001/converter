@@ -69,6 +69,14 @@ var q ={
     weeks: 604800,
     years: 31536000,
     decades: 315360000
+  },
+
+  Temperature: { 
+    celsius: [function(n){return n + 273.15},function(n){return n - 273.15}],
+    kelvin: 1,
+    fahrenheit:[function(n){return (5/9) * (n + 459.67)},function(n){return ((9/5) * n) - 459.67}],
+    rankine: [function(n){return n * (5/9)},function(n){return n * (9/5)}],
+    reaumure:[function(n){return ((5/4) * n) + 273.15 },function(n){return (4/5) * (n - 273.15)}]
   }
 
 
@@ -79,20 +87,4 @@ var q ={
 
 
 
-function convert_all(n,unit1,unit2,ref,s){
-  if(unit1 != ref && unit2 == ref){
 
-    return (q[s][unit1]) * n;
-  }
-  else if(unit1 == ref && unit2 != ref){
-
-     return (1/(q[s][unit2])) * n;
-  }
-  else if(unit1 != ref && unit2 != ref && unit1 != unit2){
-     var m = (q[s][unit1]) * n;
-     return (1/(q[s][unit2])) * m;
-  }
-  else{
-    return n;
-  }
-}
