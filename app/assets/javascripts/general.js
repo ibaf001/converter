@@ -36,6 +36,31 @@ function convert_rigth(){
 }
 
 
+function convert_all(n,unit1,unit2,ref,s){
+  if(unit1 != ref && unit2 == ref){
+
+    return (q[s][unit1]) * n;
+  }
+  else if(unit1 == ref && unit2 != ref){
+
+     return (1/(q[s][unit2])) * n;
+  }
+  else if(unit1 != ref && unit2 != ref && unit1 != unit2){
+     var m = (q[s][unit1]) * n;
+     return (1/(q[s][unit2])) * m;
+  }
+  else{
+    return n;
+  }
+}
+function convert_units(v1,unit1,unit2){
+  var res = 0;
+  var dimension = (document.getElementById("unit").innerHTML);
+  var ref = transform_unit(document.getElementById("ref").value);
+  return convert_all(v1,unit1,unit2,ref,dimension);
+}
+
+/*
 function convert_units(v1,unit1,unit2){
   var res = 0;
   var unit = (document.getElementById("unit").innerHTML).toLowerCase();
@@ -72,18 +97,13 @@ function convert_units(v1,unit1,unit2){
   return res;
 }
 
+*/
 
 function convert(){
   convert_left();
 }
 
-/*
-function transform_unit(unite){
-  var a = unite.split(" ");
-  return a.join("_");
-}
 
-*/
 
 
 function transform(unite){
