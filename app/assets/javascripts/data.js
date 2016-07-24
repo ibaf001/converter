@@ -77,6 +77,14 @@ var q ={
     fahrenheit:[function(n){return (5/9) * (n + 459.67)},function(n){return ((9/5) * n) - 459.67}],
     rankine: [function(n){return n * (5/9)},function(n){return n * (9/5)}],
     reaumure:[function(n){return ((5/4) * n) + 273.15 },function(n){return (4/5) * (n - 273.15)}]
+  },
+  Speed: {
+    meters$second: 1,
+    miles$hour: 0.44704,
+    inches$second: 0.0254,
+    feet$hour: 0.00008466683600033866,
+    yards$minute: 0.01524,
+    yards$second: 0.9144
   }
 
 

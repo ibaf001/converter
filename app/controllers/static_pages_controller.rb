@@ -55,6 +55,12 @@ class StaticPagesController < ApplicationController
     @ref = 'square meters'
     @units = ['square meters','acres','ares','hectares','square yards','square feet']
   end
+
+  def speed
+    @text = 'Speed'
+    @ref = 'meters/second'
+    @units = ['meters/second','miles/hour','inches/second','feet/hour','yards/minute','yards/second']
+  end
   
   def contact_us
     @text ="Contact us"

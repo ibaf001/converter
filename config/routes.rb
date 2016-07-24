@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'temp' =>'static_pages#temp'
   get 'length' =>'static_pages#lengths'
   get 'force' =>'static_pages#force'
+  get 'speed' =>'static_pages#speed'
   get 'time' =>'static_pages#time'
   get 'volume' =>'static_pages#volume'
   get 'reset' =>'static_pages#reset'
