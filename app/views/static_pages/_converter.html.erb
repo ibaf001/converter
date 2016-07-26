@@ -15,11 +15,11 @@
            <%= text_field_tag "r1" ,0,class: "btn-block", :onkeyup =>  "convert_left()" %>
            <%= select_tag(:s1, options_for_select(@units, selected: :s1 ), :onchange => 'convert()',class: "btn-block") %>
        </div>
-       <div class ="col-md-2 text-center fleches">
-         <a href="">
+       <div class ="col-md-2 text-center fleches" data-toggle="tooltip" title="Click to reverse units" onclick='reverse_unit();'>
+         
             <span class="glyphicon glyphicon-arrow-right "></span><br>
             <span class="glyphicon glyphicon-arrow-left "></span>
-         </a>
+         
        </div>
        <div class ="col-md-5 block-droite">
            <%= text_field_tag "r2",0, class: "btn-block", :onkeyup => "convert_rigth()" %>
