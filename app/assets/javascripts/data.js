@@ -85,6 +85,15 @@ var q ={
     feet$hour: 0.00008466683600033866,
     yards$minute: 0.01524,
     yards$second: 0.9144
+  },
+  Density: {
+    //    @units = ['kilograms/liter','ounces/cubic inch','pounds/cubic inch','pounds/cubic foot','pounds/gallon','grams/liter']
+    kilograms$liter: 1,
+    ounces$cubic_inch: 1.729994044,
+    pounds$cubic_inch: 27.679904,
+    pounds$cubic_foot:  0.016018463,
+    pounds$gallon: 0.119826427,
+    grams$liter: 0.001
   }
 
 
