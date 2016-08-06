@@ -105,6 +105,16 @@ function transform_unit(unite){
   }
   return result.join("_");
 }
+
+function reverse_unit(){
+  var a = document.getElementById("s1").value;
+  var b = document.getElementById("s2").value;
+  document.getElementById("s1").value = b;
+  document.getElementById("s2").value = a;
+  convert();
+}
+
+
   
 
 

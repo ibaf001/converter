@@ -61,6 +61,12 @@ class StaticPagesController < ApplicationController
     @ref = 'meters/second'
     @units = ['meters/second','miles/hour','inches/second','feet/hour','yards/minute','yards/second']
   end
+
+  def density
+    @text = 'Density'
+    @ref = 'kilograms/liter'
+    @units = ['kilograms/liter','ounces/cubic inch','pounds/cubic inch','pounds/cubic foot','pounds/gallon','grams/liter']
+  end
   
   def contact_us
     @text ="Contact us"
