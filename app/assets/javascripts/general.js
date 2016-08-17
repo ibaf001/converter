@@ -1,38 +1,51 @@
+$("document").ready(function() {
+  $("#r1").keyup(convert_left);
+  $("#r2").keyup(convert_rigth);
+  $("#s1").change(convert);
+  $("#s2").change(convert);
+  $("#precis").change(convert);
+});
+
+//var precision =parseInt($("#precis").val());
+
 function convert_left(){
     var res = 0;
-    var precision =parseInt(document.getElementById("precis").value);
-    var v1 = document.getElementById("r1").value;
+    var precision =parseInt($("#precis").val());
+    //var precision = document.getElementById("precis").value);
+    var v1 = $("#r1").val();//document.getElementById("r1").value;
     if(v1 == ""){
       res = "";
     }
     else{
       v1 = Number(v1);
-      var unit1 = transform_unit(document.getElementById("s1").value);
-      var unit2 = transform_unit(document.getElementById("s2").value);
+      var unit1 = transform_unit($("#s1").val());//transform_unit(document.getElementById("s1").value);
+      var unit2 = transform_unit($("#s2").val());//transform_unit(document.getElementById("s2").value);
       res = convert_units(v1,unit1,unit2);
    }
     if(!isNaN(res) && res % 1 != 0) res = res.toFixed(precision);
-    document.getElementById("r2").value = res;
+    $("#r2").val(res) ;//document.getElementById("r2").value = res;
+
 }
 
 
 
 function convert_rigth(){
     var res = 0;
-    var precision =parseInt(document.getElementById("precis").value);
-    var v1 = document.getElementById("r2").value;
+    var precision =parseInt($("#precis").val());
+    //var precision = parseInt(document.getElementById("precis").value);
+    var v1 = $("#r2").val(); //document.getElementById("r2").value;
     if(v1 == ""){
       res = "";
     }
     else{
 
       v1 = Number(v1);
-      var unit1 = transform_unit(document.getElementById("s2").value);
-      var unit2 = transform_unit(document.getElementById("s1").value);
+      var unit1 = transform_unit($("#s2").val());//transform_unit(document.getElementById("s2").value);
+      var unit2 = transform_unit($("#s1").val());//transform_unit(document.getElementById("s1").value);
       res = convert_units(v1,unit1,unit2);
    }
     if(!isNaN(res) && res % 1 != 0) res = res.toFixed(precision);
-    document.getElementById("r1").value = res;
+    $("#r1").val(res) ;//document.getElementById("r1").value = res;
 }
 
 
@@ -79,7 +92,7 @@ function convert_temp(n,unit1,unit2){
 function convert_units(v1,unit1,unit2){
   var res = 0;
   var dimension = (document.getElementById("unit").innerHTML);
-  var ref = transform_unit(document.getElementById("ref").value);
+  var ref = transform_unit($("#ref").val());//transform_unit(document.getElementById("ref").value);
   return convert_all(v1,unit1,unit2,ref,dimension);
 }
 
@@ -107,10 +120,12 @@ function transform_unit(unite){
 }
 
 function reverse_unit(){
-  var a = document.getElementById("s1").value;
-  var b = document.getElementById("s2").value;
-  document.getElementById("s1").value = b;
-  document.getElementById("s2").value = a;
+  var a = $("#s1").val();//document.getElementById("s1").value;
+  var b = $("#s2").val(); //document.getElementById("s2").value;
+ // document.getElementById("s1").value = b;
+  //document.getElementById("s2").value = a;
+  $("#s1").val(b);
+  $("#s2").val(a);
   convert();
 }
 

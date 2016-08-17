@@ -12,8 +12,8 @@
 
   <div class ="row">
        <div class ="col-md-5 block-gauche">
-           <%= text_field_tag "r1" ,0,class: "btn-block", :onkeyup =>  "convert_left()" %>
-           <%= select_tag(:s1, options_for_select(@units, selected: :s1 ), :onchange => 'convert()',class: "btn-block") %>
+           <%= text_field_tag "r1" ,0,class: "btn-block" %>
+           <%= select_tag(:s1, options_for_select(@units, selected: :s1 ),class: "btn-block") %>
        </div>
        <div class ="col-md-2 text-center fleches" data-toggle="tooltip" title="Click to reverse units" onclick='reverse_unit();'>
          
@@ -22,8 +22,8 @@
          
        </div>
        <div class ="col-md-5 block-droite">
-           <%= text_field_tag "r2",0, class: "btn-block", :onkeyup => "convert_rigth()" %>
-           <%= select_tag(:s2, options_for_select(@units, selected: :s2 ), :onchange => 'convert()',class: "btn-block") %>
+           <%= text_field_tag "r2",0, class: "btn-block" %>
+           <%= select_tag(:s2, options_for_select(@units, selected: :s2 ),class: "btn-block") %>
        </div>
    </div>
 
@@ -42,7 +42,7 @@
 
 <div class="text-center">
    <span><b class="text-warning">Decimals </b></span>
-   <%= number_field_tag :precis, 2, min: 0, max: 5,:onchange => 'convert()',class: "precision" %>
+   <%= number_field_tag :precis, 2, min: 0, max: 5,class: "precision" %>
 </div>
    
  </div>
